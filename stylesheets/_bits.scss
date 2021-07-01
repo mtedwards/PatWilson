@@ -1,0 +1,20 @@
+// $heading: #89CEDE;
+
+$feature: #DC4E00;
+$heading: #89CEDE;
+$body: #333;
+
+$fontsize: 14px;
+
+$padding: $fontsize;
+@font-face {
+  font-family: 'Melbourne';
+  src: url('../fonts/Melbourne%20regular%20basic.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/Melbourne%20regular%20basic.woff') format('woff'), 
+       url('../fonts/Melbourne%20regular%20basic.ttf')  format('truetype'),
+       url('../fonts/Melbourne%20regular%20basic.svg#svgFontName') format('svg');
+}
+
+@mixin font-stack-heading { font-family: 'Melbourne', sans-serif;}
+@mixin font-stack-title { font-family: 'Melbourne', sans-serif;}
+@mixin font-stack-body { font-family: 'Numans', sans-serif;}

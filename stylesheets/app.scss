@@ -1,0 +1,229 @@
+@import "bits";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+@import "foundation";
+@import "fancybox";
+@import "typography";
+@import "navigation";
+
+
+body{
+	@include font-stack-body;
+	background: #F4F5ED;
+	color: $body;
+	font-size: $fontsize;
+	line-height: 1.5*$fontsize;
+}
+
+#header {
+	padding-top: $padding;
+	h1 {
+		padding-top: 0px;
+		text-align: center;
+		position: relative;
+		height: 200px;
+		&:before{
+			content: "";
+			position: absolute;
+			width: 173px;
+			height: 153px;
+			background: url(../images/misc/pat_piano.png) no-repeat;
+			top:60px;
+			left:50%;
+			margin-left: -96px;
+		}
+		a{
+			color: $feature;
+			@include font-stack-title;
+			@include text-shadow(0 2px 3px rgba(0,0,0,.25));
+		}
+		margin-bottom:0;
+		padding-bottom: 0;
+	}
+}
+
+a.shop {
+  position: absolute;
+  top:20px;
+  right:-20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+a.feature, .entry .edd-submit.button.orange {
+  background: $feature;
+  &:hover {
+    background: darken($feature,10%);
+  }
+}
+
+.entry .edd-submit {
+  margin-top: 10px;
+}
+
+footer {
+	padding-top: 2*$padding;
+	font-size: 0.8*$fontsize;
+}
+
+.entry {
+	img {
+		-webkit-box-shadow: 0 10px 10px -6px black;
+		-moz-box-shadow: 0 10px 10px -6px black;
+		box-shadow: 0 10px 10px -6px black;
+		}
+}
+
+
+
+/*******************************
+/* Home */
+
+.welcome {
+	position: relative;
+ .eight {
+	.welcome-quote {
+		position: absolute;
+		text-align: center;
+		top:50%;
+		left: 15%; 
+		padding-top: 15%;
+		}
+	}
+}
+
+.latest-news {
+	padding-top: 2*$padding;
+}
+
+/*******************************
+/* Gallery */
+.gallery {
+	padding-top: 2*$padding;
+	li {
+		list-style: none;
+		float: left;
+	}
+	img {
+		-webkit-box-shadow: 0 10px 10px -6px black;
+		-moz-box-shadow: 0 10px 10px -6px black;
+		box-shadow: 0 10px 10px -6px black;
+		margin-right: $padding;
+		margin-bottom: $padding;
+		&:hover{
+			@include opacity(0.7);
+		}
+	}
+}
+
+/*******************************
+/* About */
+
+ul.tabs-content {
+	.panel {
+		width: 40%;
+		float: right;
+		margin: 0 0 20px 20px;
+		text-align: center;
+		a {
+			 margin: 0 auto 10px;
+			  height:89px;
+			  width: 150px;
+			  display: block;
+			  background: url('../images/misc/wombat.png') no-repeat;
+			  background-size: cover;
+			  text-indent: -9999px;
+			  &:hover {
+				  @include transform(rotate(-10deg));
+				 }
+		}
+	}
+}
+
+/*******************************
+/* links */
+
+.links li {
+	list-style: none;
+	padding-bottom: 2*$padding;
+		a{
+			font-size: 1.5*$fontsize;
+			font-weight: bold;
+			display: block;
+			}
+}
+
+
+/*******************************
+/* Papers */
+
+.papers {
+	ul {
+		list-style: none;
+		margin-left: 0;
+		li {
+			padding-bottom: $padding;
+		}
+	}
+}
+.download {
+	line-height: 40px;
+	font-weight: bold;
+	a {
+		height:40px;
+		width: 67px;
+		display: inline-block;
+		background: url('../images/misc/wombat.png') no-repeat;
+		background-size: cover;
+		text-indent: -9999px;
+		&:hover {
+		  	@include transform(rotate(-10deg));
+		}
+	}
+}
+.feature-caption {
+	p.wp-caption-text {
+		line-height: 30px;
+	}
+}
+
+@media (max-width: 600px) {
+   * { font-weight: normal!important; }
+}
+
+
+/***********************
+/* Shop  */
+
+.container .entry .gform_wrapper {
+  
+  > li {
+    margin-bottom: 1em !important;
+  }
+  
+  form  .gfield.gfield_price {
+      margin-bottom: 1em !important;
+    }
+   
+  h2.gsection_title {
+    font-size: 1.8em;
+    margin: 2em 0 0 !important;
+  }
+  
+  li.gfield_shipping {
+    margin-top: 2em !important;
+  }
+  
+  li.gfield_shipping label.gfield_label, li#field_2_11 label {
+    font-size: 1.4em !important;
+  }
+  
+  input.button.gform_button {
+    background: #89cede;
+    &:hover {background: darken(#89cede,10%);}
+  }
+  
+}
+
+

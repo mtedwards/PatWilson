@@ -1,0 +1,69 @@
+/*	--------------------------------------------------
+    :: Typography
+	-------------------------------------------------- */
+	h1, h2, h3, h4, h5, h6 { color: $heading; font-weight: bold; line-height: 1.25 }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 4*$fontsize; padding: $padding 0;}
+	h2 { font-size: 3*$fontsize; padding: $padding 0; }
+	h3 { font-size: 2*$fontsize; padding: 0.5*$padding 0; }
+	h4 { font-size: 1.5*$fontsize; padding: 0.5*$padding 0; }
+	h5 { font-size: $fontsize; padding: 0 0 $padding 0;  }
+	h6 { font-size: $fontsize; font-weight: normal; }
+
+	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
+
+	p { line-height: 17px; margin: 0 0 18px; }
+	p img { margin: 0; }
+	p.lead { font-size: 18px; font-size: 1.8rem; line-height: 24px;  }
+	
+	em, i { font-style: italic; line-height: inherit; }
+	strong, b { font-weight: bold; line-height: inherit; }
+	small { font-size: 60%; line-height: inherit; }
+	
+	h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
+	
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 20px; color: #777; }
+	blockquote { margin: 0 0 18px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; font-size: 1.2rem; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited { color: #555; }
+	
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 12px 0 18px; height: 0; }
+	
+	abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222; border-bottom: 1px solid #ddd; cursor: help; }
+	abbr { text-transform: none; }
+	
+	.entry ul {
+		list-style: disc;
+		list-style-position: outside;
+		margin-left: 16px;
+		&.tabs-content {
+			list-style: none;
+			margin: 0;
+			padding: 0;	
+		}
+		li {
+			margin:0;
+			padding: 0;
+		}
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	@include font-stack-heading;
+	padding-bottom: $padding;
+	color: $heading;
+	
+	a {
+		color: $heading;
+	}
+}
+
+a { 
+	color:$feature;
+	&:hover, &:focus {
+		color: $heading;
+	}	
+}
+
+p {margin:0;padding: 0; margin-bottom: $padding; line-height: 1.5*$fontsize;}

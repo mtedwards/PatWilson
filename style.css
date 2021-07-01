@@ -1,0 +1,15 @@
+/* 
+Theme Name: Emptyhead Foundation
+Theme URI: hhttp://emptyhead.com.au
+Description: A Responsive Starter Theme built on Zurb Foundation 2
+Author: @mtedwards
+*/
+
+@import url("stylesheets/app.css");
+[if lt IE 9] @import url("stylesheets/ie.css");
+
+.welcome .eight .welcome-quote {
+  position: relative;
+  text-align: center;
+  padding-top: 10%;
+}
